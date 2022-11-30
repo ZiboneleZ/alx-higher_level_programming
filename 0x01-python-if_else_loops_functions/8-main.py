@@ -1,5 +1,5 @@
-#!/usr/bin/python3
-uppercase = __import__('task_9').uppercase
+#!/usr/bin/env python3
+uppercase = __import__('8-uppercase').uppercase
 
-uppercase("holberton")
-uppercase("Holberton School 98 Battery street")
+uppercase("best")
+uppercase("Best School 98 Battery street")
