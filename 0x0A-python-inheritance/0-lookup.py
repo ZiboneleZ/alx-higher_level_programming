@@ -4,7 +4,7 @@
 
 
 def lookup(obj):
-        ''' function: lookup()
+    ''' function: lookup()
     Returns a list object
     '''
-            return dir(obj)
+    return dir(obj)
