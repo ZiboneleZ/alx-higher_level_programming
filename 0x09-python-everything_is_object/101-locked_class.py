@@ -2,6 +2,8 @@
 
 """Defines a locked class."""
 
+
+
 class LockedClass:
 
     """
