@@ -25,4 +25,4 @@ def find_peak(list_of_integers):
                         return value
                 elif idx == length - 1 and list_of_integers[idx - 1] <= value:
                         return value
-        return peak
+        return pick
