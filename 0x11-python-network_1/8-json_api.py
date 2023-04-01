@@ -1,4 +1,4 @@
-#!/bin/python3
+#!/usr/bin/python3
 """
 script that takes in a letter and sends a POST request 
 to http://0.0.0.0:5000/search_user 

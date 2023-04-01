@@ -1,4 +1,4 @@
-#!/bin/python3
+#!/usr/bin/python3
 """
 script that takes your GitHub credentials 
 (username and password) 
