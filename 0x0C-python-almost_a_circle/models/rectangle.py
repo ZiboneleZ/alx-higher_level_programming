@@ -41,10 +41,11 @@ class Rectangle(Base):
     @x.setter
     def x(self, value):
         self.validator("x", value)
+        self.__x = value
 
     @property
     def y(self):
-        # X of angle
+        # Y of rectangle
         return self.__y
 
     @y.setter
@@ -66,3 +67,10 @@ class Rectangle(Base):
     def area(self):
         # This will give the area of the rectangle
         return self.width * self.height
+
+    # This is 5. Display #0
+    def display(self):
+        # This will print #
+        hash_printer = '\n' * self.y + \
+                (' ' * self.x + '#' * self.width + '\n') * self.height
+        print(hash_printer, end='')
