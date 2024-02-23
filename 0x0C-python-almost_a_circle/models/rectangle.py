@@ -74,3 +74,9 @@ class Rectangle(Base):
         hash_printer = '\n' * self.y + \
                 (' ' * self.x + '#' * self.width + '\n') * self.height
         print(hash_printer, end='')
+
+    def __str__(self):
+        # Overriding the __str__
+        return '[{}] ({}) {}/{} - {}/{}'.\
+                format(type(self).__name__, self.id, self.x, self.y,self.width, self.height)
+
