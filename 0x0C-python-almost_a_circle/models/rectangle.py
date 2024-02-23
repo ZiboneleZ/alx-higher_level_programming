@@ -4,7 +4,7 @@ class Rectangle(Base):
     # This is the claass of - 2.First Rectangle
 
     def __init__(self, width, height, x=0, y=0, id=None):
-        '''This is aa constructor'''
+        #This is aa constructor
         super().__init__(id)
         self.width = width
         self.height = height
@@ -26,7 +26,7 @@ class Rectangle(Base):
     @property
     def height(self):
         # Height of the rectangle
-        return self.__heihgt
+        return self.__height
 
     @height.setter
     def height(self, value):
@@ -56,9 +56,13 @@ class Rectangle(Base):
     #This is a validator
     def validator(self, name, value, eq=True):
         if type(value) != int:
-            raise TypeError("{} must be an integer".format(name))
+            raise TypeError(f"{name} must be an integer")
         if not eq and value <= 0:
             raise ValueError(f"{name} must be > 0")
         elif eq and value < 0:
             raise ValueError(f"{name} must be >= 0")
     
+    # This is the 4.Area First
+    def area(self):
+        # This will give the area of the rectangle
+        return self.width * self.height
