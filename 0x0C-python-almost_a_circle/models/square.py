@@ -20,5 +20,23 @@ class Square(Rectangle):
         self.width = value
         self.height = value
 
+    def __update(self, id=None, size=None, x=None, y=None):
+        # This will update the instance att's using below 'update' function
+        if id is not None:
+            self.id = id
+        if size is not None:
+            self.size = size
+        if x is not None:
+            self.x = x
+        if y is not None:
+            self.y = y
+
+    def update(self, *args, **kwargs):
+        # This updates the instance att's using args
+        if args:
+            self.__update(*args)
+        elif kwargs:
+            self.__update(**kwargs)
+
 
 
