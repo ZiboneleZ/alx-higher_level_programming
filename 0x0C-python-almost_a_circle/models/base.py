@@ -1,4 +1,4 @@
-from json import dumps
+from json import dumps, loads
 
 class Base:
     ''' Comment '''
@@ -29,3 +29,9 @@ class Base:
         with open("{}.json".format(cls.__name__), "w", encoding="utf-8") as the_file:
             the_file.write(cls.to_json_string(list_objs))
 
+    @staticmethod
+    def from_json_string(json_string):
+        # Returns the list of the JSON string representation json_string
+        if json_string is not None or not json_string:
+            return []
+        return loads(json_string)
