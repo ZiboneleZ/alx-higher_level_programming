@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 from json import dumps, loads
 import csv
 
