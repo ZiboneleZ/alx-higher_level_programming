@@ -5,17 +5,13 @@ if __name__ == "__main__":
     import MySQLdb
     from sys import argv, exit
 
-    if len(argv) != 4:
-        print("Usage: {:s} <username> <password> <database>".format(argv[0]))
-        exit(1)
+    mysql_username = argv[1]
+    mysql_password = argv[2]
+    datbase_name = argv[3]
 
-    usr = argv[1]
-    pwd = argv[2]
-    dbe = argv[3]
-
-    database = MySQLdb.Connect(user=usr, passwd=pwd, db=dbe, port=3306)
+    database = MySQLdb.Connect(user=mysql_username, passwd=mysql_password, db=datbase_name, port=3306)
     cursor = database.cursor()
-    cursor.execute("SELECT * FROM states")
+    cursor.execute("SELECT * FROM states SORTED BY 'states_id'")
     states = cursor.fetchall()
     for row in states:
         print(row)
